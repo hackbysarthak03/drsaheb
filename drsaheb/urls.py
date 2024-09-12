@@ -22,7 +22,7 @@ app_name = 'drsaheb'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home, name='x'),
+    path('', views.Home, name='home'),
     path('sign-out', views.signOut, name='sign-out'),
     path('about-us/', views.About, name='about'),
     path('services/', views.Services, name='services'),
