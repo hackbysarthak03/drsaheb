@@ -18,8 +18,6 @@ import whitenoise
 import os
 
 
-handler404 = 'drsaheb.views.custom_404'
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,7 +31,7 @@ SECRET_KEY = 'django-insecure-l+=_+3sh3yy_!2&r(ra@z)$+qh3gzh56^@-j=c+p%7ntad+##q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -58,13 +56,13 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'drsaheb.urls'
@@ -139,6 +137,8 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = 'Static/'
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = '/Images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Static/Images')

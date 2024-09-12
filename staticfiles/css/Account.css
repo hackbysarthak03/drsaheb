@@ -71,10 +71,10 @@ html {
                 font-size: 18px;
                 font-weight: 200;
                 cursor: pointer;
-                transition: background 0.8s ease;
+                transition: 0.8s ease;
 
                 &:hover {
-                    background: #c43e2f;
+                    background-color: #c43e2f;
                 }
 
                 &:active {
