@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500');
+
+.container-xyz{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.checkbox-inline {
+    display: inline-block;
+    margin-right: 15px;
+    /* Space between checkboxes */
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.btn-submit {
+    background: #797979;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: #5f5f5f;
+    }
+
+    &:active {
+        background: #5f5f5f;
+    }
+
+}
+
+.btn-submit-clear {
+    background: #e5e5e5;
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    margin: 10px;
+    color: #797979;
+    font-size: 10px;
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: #5f5f5f;
+        color: white;
+    }
+
+    &:active {
+        color: white;
+        background: #5f5f5f;
+    }
+
+}
+
+.blog-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.blog-title {
+    font-size: 25px;
+    color: #5f5f5f;
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.blog-content {
+    font-size: 16px;
+    color: #5f5f5f;
+    font-family: "Montserrat", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 1rem 0rem;
+}
+
+.blog-end {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #5f5f5f;
+    text-transform: uppercase;
+}
+
+.my-blog {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box2 {
+    width: 350px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    background: #ededed;
+}
+
+.box1 {
+    margin-top: 10px;
+}
+
+.box1 .content {
+    margin: 15px 2px;
+}
+
+.image img {
+    height: auto;
+    width: 120px;
+    border-radius: 50%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.level {
+    font-size: 0.7em;
+    background-color: rgb(164, 189, 183, 0.5);
+    width: min-content;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0px auto;
+}
+
+.level p{
+    margin: 0;
+    width: fit-content;
+}
+
+.name {
+    font-size: 1.25em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.job_title {
+    font-size: 14px;
+    color: gray;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -2px;
+}
+
+.job_description {
+    font-size: 0.7em;
+    color: gray;
+    margin: 10px 30px 20px;
+    text-align: justify;
+}
+
+
+.icons button {
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    font-size: 1em;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px 30px 0px;
+    font-size: 11px;
+}
+
+.button .message {
+    background: #ededed;
+    border: 2px solid #000;
+}
+
+.button .connect {
+    background-color: #000;
+    color: #ededed;
+    border: none;
+}
+
+button.connect:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+button.message:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.join-doctor{
+    background-color: rgb(54, 128, 255);
+    color: white;
+}
+
+
+/* Content-1:End */

@@ -1,0 +1,83 @@
+{% extends 'Base/Base.html' %}
+
+{% block content %}
+<div class="untree_co-hero pb-0" id="home-section">
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 text-center mb-5">
+                        <h1 style="font-size: 60px; color: #5f5f5f;" class="heading" data-aos="fade-up"
+                            data-aos-delay="0">{{data.name}}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12 d-flex align-items-center justify-content-center" style="text-align: center ;">
+                    <div class="intro">
+                        <div class="excerpt" data-aos="fade-up" data-aos-delay="100">
+                            {{data.desc}}
+                        </div> <!-- /.excerpt -->
+                    </div>
+
+                </div> <!-- /.col-lg-5 -->
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div> <!-- /.container -->
+    <!-- <div class="illustration">
+      
+    </div> -->
+</div>
+
+<div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-md-7 text-center mb-5">
+                    <span class="caption" data-aos="fade-up" data-aos-delay="0">Our Topmost Doctors in
+                        {{data.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div> <!-- /.container -->
+<!-- <div class="illustration">
+      
+    </div> -->
+
+{% for doctor in doctors %}
+<div class="container-xyz" data-aos="fade-left" data-aos-delay="100">
+    <div class="box1 box2">
+        <div class="content">
+            <div class="image">
+                <img src="/Static/Images/dr.jpg" alt="Profile Image">
+            </div>
+            <div class="level">
+                <p>VERIFIED</p>
+            </div>
+            <div class="text">
+                <p class="name">Dr. {{doctor.user.first_name}} {{doctor.user.last_name}}</p>
+                <p class="job_title">{{data.name}}</p>
+                <p class="job_description">{{doctor.desc}}</p>
+            </div>
+            <div class="button">
+                <div>
+                    <button class="message" type="button">Show Profile</button>
+                </div>
+                <div>
+                    <a href="/book/{{doctor.user.username}}"><button class="connect" type="button">Book Appointment</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% empty %}
+<div class="container-xyz" style="color: #5f5f5f; font-size: 20px;" data-aos="fade-up" data-aos-delay="100">
+    No Doctors Available
+</div>
+{% endfor %}
+{% endblock %}
