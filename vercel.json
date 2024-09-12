@@ -6,6 +6,10 @@
     }],
     "routes": [
         {
+            "src": "/Static/(.*)",     
+            "dest": "/Static/$1" 
+        },
+        {
             "src": "/(.*)",
             "dest": "drsaheb/wsgi.py"
         }

@@ -14,6 +14,8 @@ from pathlib import Path
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+import whitenoise
+import os
 
 
 handler404 = 'drsaheb.views.custom_404'
@@ -62,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'drsaheb.urls'
@@ -132,10 +135,16 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-    BASE_DIR, 'Static'
+    os.path.join(BASE_DIR, 'Static')
 ]
 
 STATIC_URL = 'Static/'
+
+MEDIA_URL = '/Images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Static/Images')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
