@@ -16,6 +16,7 @@ import cloudinary.uploader
 import cloudinary.api
 import whitenoise
 import os
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -89,13 +90,16 @@ WSGI_APPLICATION = 'drsaheb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse("postgresql://drsahebdb_user:iPnpvfSP4pRF3mudFyMUaqSUeB3B1nmw@dpg-crhkn6rtq21c73fv4pf0-a.oregon-postgres.render.com/drsahebdb")
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
