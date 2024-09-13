@@ -24,7 +24,7 @@ from django.conf import settings
 app_name = 'drsaheb'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin-panel-vsarthak62/', admin.site.urls),
     path('', views.Home, name='home'),
     path('sign-out', views.signOut, name='sign-out'),
     path('about-us/', views.About, name='about'),
