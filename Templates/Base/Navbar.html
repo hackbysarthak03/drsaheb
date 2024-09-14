@@ -9,6 +9,7 @@
 {% if request.user.is_authenticated %}
 <li><a href="{% url 'services' %}">Services</a></li>
 <li><a href="/blogs/">Blogs</a></li>
+<li><a href="/my-bookings/" style="color: #000;">Bookings</a></li>
 <li><a href="/profile/{{request.user}}" style="color: #000;">Account</a></li>
 <li><a href="{% url 'sign-out' %}" style="color: #000;">Logout </a></li>
 {% else %}
